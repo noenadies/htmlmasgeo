@@ -28,17 +28,11 @@
 var lat=0;
 
 function viewMap (position) {
-  
-  var lon = position.coords.longitude;  //guardamos la longitud
-   lat = position.coords.latitude;   //guardamos la latitud
-  console.log(lat+" la es  lon"+lon);
- 
-initMap();
 
  
 }   function initMap() {//geoloc(); navigator.geolocation.getCurrentPosition(viewMap);
-   navigator.geolocation.getCurrentPosition(viewMap);
-        var myLatLng = {lat:6.6285194999999995, lng:-74.1371145};
+  
+        var myLatLng = {lat:4.6285495999999995, lng:-74.1371145};
  
 //myLatLng.lat=l;
 
@@ -47,17 +41,13 @@ initMap();
           center: myLatLng
         });
 var d =0;
-      for(var i=0;i<12;i=i+1){myLatLng.lat=myLatLng.lat+d; d=(d+0.0001)*0; var marker = new google.maps.Marker({
+      for(var i=0;i<12;i=i+1){myLatLng.lat=myLatLng.lat+d; d=(d+0.0001)*1; var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
           title: 'Hello World!'
         });}
       }
 
-      function si(){
-initMap();
-      }
-      si();
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV4ya46Yoag-iGeJb5SUwZ2q1Irx0UjnU&callback=initMap">
