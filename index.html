@@ -39,15 +39,15 @@ initMap();
 }   function initMap() {//geoloc(); navigator.geolocation.getCurrentPosition(viewMap);
    navigator.geolocation.getCurrentPosition(viewMap);
         var myLatLng = {lat:6.6285194999999995, lng:-74.1371145};
-   alert(" latitud "+myLatLng);
+ 
 //myLatLng.lat=l;
-myLatLng.lat=lat;
+
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: myLatLng
         });
 var d =0;
-      for(var i=0;i<1;i=i+1){ d=(d+0.0001)*0; var marker = new google.maps.Marker({
+      for(var i=0;i<12;i=i+1){myLatLng.lat=myLatLng.lat+d; d=(d+0.0001)*0; var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
           title: 'Hello World!'
